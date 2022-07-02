@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 const NoHubo = (props) => {
     return (
         <div className='agotado'>
@@ -16,6 +16,10 @@ const NoHubo = (props) => {
             </ul>
         </div>
     );
+}
+NoHubo.propTypes = {
+	lista: PropTypes.array.isRequired,
+	
 }
 
 export default NoHubo;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Comprar = (props) => {
 //     const cosas= ()=>(event)=>{
@@ -23,5 +24,10 @@ const Comprar = (props) => {
         </div>
     );
 }
-
+Comprar.propTypes = {
+	lista: PropTypes.array.isRequired,
+	borrarLista: PropTypes.func.isRequired,
+    carrito:PropTypes.func.isRequired,
+    nohay:PropTypes.func.isRequired,
+}
 export default Comprar;

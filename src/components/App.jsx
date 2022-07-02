@@ -31,6 +31,13 @@ const App = () => {
   const handleClick = () => {
 		const objetoEnEstado = state.objeto;
 		if (!objetoEnEstado) return;
+    const DidUpdate=()=> {
+
+      setState({
+        ...state,
+        mensaje: `Tienes ${state.lista.length} cosas que comprar `
+      })
+    }
 
 		const listaActualizada = [
 			...state.lista,
@@ -56,11 +63,13 @@ const App = () => {
     const listaEnCarrito= state.lista.slice(key,1)
     const en_el_carro= [...state.lista];
 		en_el_carro.splice(key, 1);
+   
 
       setState({
         ...state,
         lista:en_el_carro,
         listaCarrito:listaEnCarrito
+        
       })
     
 
